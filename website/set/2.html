@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <style type="text/css">
+         @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+/*-- VARIABLES CSS--*/
+/*Colores*/
+:root{
+    --first-color: #E3F8FF;
+    --second-color: #DCFAFB;
+    --third-color: #FFE8DF;
+    --forth-color: #FFFF99;
+    --accent-color: #FF5151;
+    --dark-color: #000;
+    --whr-color: #000;
+}
+
+/*Tipografia responsive*/
+:root{
+    --body-font: 'Open Sans';
+    --h1-font-size: 1.5rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --smaller-font-size: 0.75rem;
+}
+
+@media screen and (min-width: 768px){
+    :root{
+        --h1-font-size: 2rem;
+        --normal-font-size: 1rem;
+        --smaller-font-size: 0.813rem;
+    }
+}
+
+/*-- BASE --*/
+*,::after,::before{
+    box-sizing: border-box;
+}
+body{
+    margin: 2rem 0 0 0;
+    background-color: #fff;
+    color: var(--dark-color);
+    font-family: var(--body-font);
+}
+h1{
+    font-size: var(--h1-font-size);
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+/*-- LAYAOUT --*/
+.main {
+    padding: 2rem 0;
+}
+.bd-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    max-width: 1200px;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    align-items: center;
+    gap: 2rem;
+}
+
+/*-- PAGES --*/
+.title-shop{
+    position: relative;
+    margin: 0 2.5rem;
+}
+.title-shop::after{
+    content: '';
+    position: absolute;
+    margin-left: .25rem;
+}
+
+/*-- COMPONENT --*/
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+article:nth-child(1){
+    background-color: var(--first-color);
+}
+article:nth-child(2){
+    background-color: var(--second-color);
+}
+article:nth-child(3){
+    background-color: var(--third-color);
+}
+article:nth-child(4){
+    background-color: var(--forth-color);
+}
+article:nth-child(5){
+    background-color: var(--five-color);
+}
+.card__img{
+    width: 180px;
+    height: auto;
+    padding: 3rem 0;
+    transition: .5s;
+}
+.card__name{
+    position: absolute;
+    left: -25%;
+    top: 0;
+    width: 3.5rem;
+    height: 100%;
+    text-align: center;
+    background-color: var(--dark-color);
+    color: #fff;
+    font-weight: bold;
+}
+.card__icon{
+    font-size: 1.5rem;
+    color: var(--dark-color);
+}
+.card__icon:hover{
+    color: var(--accent-color);
+}
+.card__precis{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    transition: .5s;
+}
+.card__preci{
+    display: block;
+    text-align: center;
+}
+.card__preci--before{
+    font-size: var(--smaller-font-size);
+    color: var(--accent-color);
+    margin-bottom: .25rem;
+}
+.card__preci--now{
+    font-size: var(--h3-font-size);
+    font-weight: bold;
+}
+/*Move left*/
+.card:hover{
+    box-shadow: 0 .5rem 1rem #D1D9E6;
+}
+.card:hover .card__name{
+    left: 0;
+}
+.card:hover .card__img{
+    transform: rotate(30deg);
+    margin-left: 3.5rem;
+}
+.card:hover .card__precis{
+    margin-left: 3.5rem;
+    padding: 0 1.5rem;
+}
+
+/*-- MEDIA QUERIES --*/
+.btn {
+  background: #0ee6b0;
+  background-image: -webkit-linear-gradient(top, #0ee6b0, #12e632);
+  background-image: -moz-linear-gradient(top, #0ee6b0, #12e632);
+  background-image: -ms-linear-gradient(top, #0ee6b0, #12e632);
+  background-image: -o-linear-gradient(top, #0ee6b0, #12e632);
+  background-image: linear-gradient(to bottom, #0ee6b0, #12e632);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  text-shadow: 1px 1px 3px #666666;
+  font-family: Courier New;
+  color: #0a0a0a;
+  font-size: 16px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  text-decoration: none;
+}  </style>
+          <link rel='stylesheet' href='https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css'>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <title>Select Course</title>
+    </head>
+    <body bgcolor="black">
+        
+        <h1 class="title-shop">Course &nbsp; &#8594;</h1>
+       
+         <main class="main bd-grid">
+            <article class="card">
+                <div class="card__img">
+                  <H2><img src="https://image.flaticon.com/icons/png/512/2436/2436642.png" style="width: 70%; height: 70%;"></H2>
+                  <H3>Mathematics</H3><br>
+                  <a href="https://cloud.degoo.com/share/gqERsWsS4S1w8l4jc2fpWA"><button class="btn">Course&nbsp; &#8594;</button></a>
+                    <!---<img src="assets/img/img5.png" alt="">--->
+                </div>        
+            </article>
+               <article class="card">
+                <div class="card__img">
+                  <H2><img src="https://image.flaticon.com/icons/png/512/1157/1157001.png" style="width: 70%; height: 70%;"></H2>
+                  <H3>Science</H3><br>
+                  <a href="https://cloud.degoo.com/share/KubtqWH3pTUTC_u1A7PTRw"><button class="btn">Course &nbsp; &#8594;</button></a>
+                    <!---<img src="assets/img/img5.png" alt="">--->
+                </div>
+            </article>
+            
+        </main>
+
+        <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+          <script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
+<script src='https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js'></script>
+    </body>
+</html>
